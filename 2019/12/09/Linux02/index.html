@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://loading-end.github.io">
-  <title>使用Git编写Hexo博客 | MyBlog</title>
+  <title>Linux02之vim | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo 是一个快速,简洁且高效的博客框架。">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="vim —— 编辑器之神   vim &#x3D; vi improved   vim 是从 vi 发展出来的一个文本编辑器，支持 代码补全、编译 及 错误跳转 等方便编程的功能特别丰富，在程序员中被广泛使用,被称为 编辑器之神编辑器之神推荐网站:VIM">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Git编写Hexo博客">
-<meta property="og:url" content="https:&#x2F;&#x2F;loading-end.github.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;%E4%BD%BF%E7%94%A8Git%E7%BC%96%E5%86%99Hexo%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="Linux02之vim">
+<meta property="og:url" content="https:&#x2F;&#x2F;loading-end.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;Linux02&#x2F;index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="Hexo 是一个快速,简洁且高效的博客框架。">
+<meta property="og:description" content="vim —— 编辑器之神   vim &#x3D; vi improved   vim 是从 vi 发展出来的一个文本编辑器，支持 代码补全、编译 及 错误跳转 等方便编程的功能特别丰富，在程序员中被广泛使用,被称为 编辑器之神编辑器之神推荐网站:VIM">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-10T05:34:52.955Z">
+<meta property="og:updated_time" content="2019-12-10T15:09:26.507Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
@@ -191,61 +191,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-使用Git编写Hexo博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux02" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用Git编写Hexo博客
+      Linux02之vim
     </h1>
   
 
         
-        <a href="/2019/12/08/%E4%BD%BF%E7%94%A8Git%E7%BC%96%E5%86%99Hexo%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-12-08T07:38:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
+        <a href="/2019/12/09/Linux02/" class="archive-article-date">
+  	<time datetime="2019-12-09T10:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><pre><code>在站点文件夹中打开git bash,输入如下命令创建文章,其中title为文章的标题
-$ hexo new &quot;my-first-blog&quot;
-此时就会在source/_post文件夹中创建了一个文件,命名为:my-first-blog.md,
-而这个文件就是将要发布到网站上的原始文件,记录文章内容</code></pre> <a id="more"></a>
-<h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="1-标题"><a href="#1-标题" class="headerlink" title="(1)标题"></a>(1)标题</h3><pre><code>Markdown 语法:
-1.# 一级标题
-2.## 二级标题
-3.### 三级标题
-4.#### 四级标题
-5. ##### 五级标题
-6. ###### 六级标题    </code></pre><h3 id="2-粗体、斜体、删除线和下划线"><a href="#2-粗体、斜体、删除线和下划线" class="headerlink" title="(2)粗体、斜体、删除线和下划线"></a>(2)粗体、斜体、删除线和下划线</h3><pre><code>Markdown语法:
-1.* 斜体 *
-2.** 粗体 **
-3.*** 加粗斜体 ***
-4.~~ 删除线 ~~
-Typora快捷键
-ctrl+b: 粗体</code></pre><h3 id="3-引用快"><a href="#3-引用快" class="headerlink" title="(3)引用快"></a>(3)引用快</h3><pre><code>Markdown 语法:
-‘&gt;’文字引用
-Typora快捷键: ctrl+shift +q</code></pre><h3 id="4-代码块"><a href="#4-代码块" class="headerlink" title="(4)代码块"></a>(4)代码块</h3><pre><code>Markdown语法:
-1.``行内代码
-2.···
-3.多行代码
-4.多行代码
-5.```</code></pre><h3 id="5-代码块"><a href="#5-代码块" class="headerlink" title="(5)代码块"></a>(5)代码块</h3><pre><code>Markdown语法
-1.$$
-2.数学公式
-3.$$</code></pre><h3 id="6-分割线"><a href="#6-分割线" class="headerlink" title="(6)分割线"></a>(6)分割线</h3><pre><code>Markdown语法:
-1.方法一: ——
-2.方法二:+++
-3.方法三:***
-使用以上三种方法都可以</code></pre><h3 id="7-列表"><a href="#7-列表" class="headerlink" title="(7)列表"></a>(7)列表</h3><pre><code>Markdown语法:
-1 有序列表项
-*无序列表项
-+无序列表项
-$ hexo d -g 发布</code></pre>
+        <h2 id="vim-——-编辑器之神"><a href="#vim-——-编辑器之神" class="headerlink" title="vim —— 编辑器之神"></a>vim —— 编辑器之神</h2><p>   vim = vi improved<br>   vim 是从 vi 发展出来的一个文本编辑器，支持 代码补全、编译 及 错误跳转 等方便编程的功能特别丰富，在程序员中被广泛使用,被称为 编辑器之神<br><font color="red">编辑器之神</font><br>推荐网站:<a href="https://blog.csdn.net/weixin_43250623/article/details/88722389" target="_blank" rel="noopener">VIM</a><br> <a id="more"></a></p>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><p>vs &nbsp;  +(名字.txt) &nbsp;   左右分屏  &nbsp;&nbsp;    Ctrl+两个WW   切换<br>sp &nbsp;&nbsp;上下分屏<br>单词替换: &nbsp;&nbsp;  %s/ 旧的信息/新的信息 /g            </p>
+<p>可视模式下的快捷键:<br><br><br>   h(左移)&nbsp;j(下)&nbsp;k(上)&nbsp;l(右)<br>   行选中 shift +V+方向键  &nbsp;&nbsp;   列选中Ctrl+ V+方向键   &nbsp;&nbsp; 选中某个单词 V+左右键<br>   复制 y &nbsp;&nbsp; 粘贴 p  &nbsp;&nbsp; 剪切 x  &nbsp;&nbsp;    撤销u &nbsp;&nbsp; 撤销后反悔 Ctrl +R<br>   末尾G &nbsp;&nbsp;   开头 gg &nbsp;&nbsp;<br>   替换  &nbsp;&nbsp; R<br>   保存并退出 ZZ &nbsp;  wq<br>   高亮显示 &nbsp; / + 要高亮的单词<br><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">vim 官网:https:&#x2F;&#x2F;www.vim.org&#x2F;</span></pre></td></tr></table></figure>
       
 
       
@@ -289,13 +258,24 @@ $ hexo d -g 发布</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -345,7 +325,7 @@ $ hexo d -g 发布</code></pre>
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://loading-end.github.io/2019/12/08/%E4%BD%BF%E7%94%A8Git%E7%BC%96%E5%86%99Hexo%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://loading-end.github.io/2019/12/09/Linux02/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -359,18 +339,18 @@ $ hexo d -g 发布</code></pre>
   
 <nav id="article-nav">
   
-    <a href="/2019/12/09/Linux02/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/09/Linux01/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Linux02之vim
+          Linux01
         
       </div>
     </a>
   
   
-    <a href="/2019/12/07/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的前言</div>
+    <a href="/2019/12/08/%E4%BD%BF%E7%94%A8Git%E7%BC%96%E5%86%99Hexo%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Git编写Hexo博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -415,7 +395,7 @@ if(true){
   	repo: 'loading-end.github.io',
   	owner: 'Loading-end',
   	admin: ['Loading-end'],
-  	id: 'Sun Dec 08 2019 15:38:47 GMT+0800',
+  	id: 'Mon Dec 09 2019 18:41:09 GMT+0800',
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container')
