@@ -4325,7 +4325,8 @@ category-all-page {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    margin: 10px 15px;
+    border-radius: 10px 60px;
+    margin: 10px 190px;
     cursor: pointer;
   }
 .category-list-item-list-item:hover {
@@ -4333,7 +4334,7 @@ category-all-page {
     color: white;
 }
 .category-list-item-list-link{
-  color: #a0a0a0;
+  color: white;
 }
 
 
