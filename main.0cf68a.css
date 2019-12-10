@@ -4303,6 +4303,7 @@ category-all-page {
     min-height: 70vh;
   }
   .category-all-page h2 {
+    color: #696969;
     margin: 20px 0;
   }
   .category-all-page .category-all-title {
@@ -4316,7 +4317,6 @@ category-all-page {
     padding: 0;
     list-style: none;
   }
-
 
   .category-all-page .category-list-item-list-item {
      background-color: #999; 
@@ -4336,7 +4336,6 @@ category-all-page {
 .category-list-item-list-link{
   color: white;
 }
-
 
   .category-all-page .category-list-item-list-count {
     color: $grey;
