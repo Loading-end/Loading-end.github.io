@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="MyBlog">
 <meta property="og:description" content="C语言(C程序)的变量1.明确计算机内存相关概念 内存:暂存CPU数据运算时的数据或者运算之后的数据  优点:速度快缺点:掉电丢失结论:程序最终玩的内存(玩的不是程序,玩的是内存) 字节(Byte):计算机中将内存分成一格一格,每一格用来存一个数字每一格专业术语叫字节,内存的最小存储单元为字节 地址(address):计算机中给内存的每个字节指定一个编号,此编号从0开始此编号专业术语叫地址 存储区">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-12T12:14:52.151Z">
+<meta property="og:updated_time" content="2019-12-12T13:55:09.354Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
@@ -218,114 +218,109 @@
  <a id="more"></a>
 
 <h3 id="2-变量功能"><a href="#2-变量功能" class="headerlink" title="2.变量功能:"></a>2.变量功能:</h3><p>   就是为了分配内存空间,并且将来分配的内存空间里存储的数字可以随时改变</p>
-<h3 id="3-定义变量的语法格式"><a href="#3-定义变量的语法格式" class="headerlink" title="3.定义变量的语法格式"></a>3.定义变量的语法格式</h3><pre><code>数据类型   变量名   =  初始值(可以有,可以没有);</code></pre><p>   例如:<br>      int  var = 250;<br>   说明:</p>
+<h3 id="3-定义变量的语法格式"><a href="#3-定义变量的语法格式" class="headerlink" title="3.定义变量的语法格式"></a>3.定义变量的语法格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">数据类型   变量名   &#x3D;  初始值(可以有,可以没有);</span></pre></td></tr></table></figure>
+<p>   例如:<br>      int  var = 250;<br>   说明:</p>
 <blockquote>
 <p>int:它是一个关键字,表示将来可以分配4字节内存空间<br>var:变量名<br>250:将来分配的内存存储区默认放一个数字250<br>此条语句动作：将来操作系统会帮你分配4字节内存并且往这块内存放一个数字250</p>
 </blockquote>
-<h3 id="4-定义变量的四种形式"><a href="#4-定义变量的四种形式" class="headerlink" title="4.定义变量的四种形式"></a>4.定义变量的四种形式</h3><p> 1.只定义(只分配内存,不会往里面放数)<br>         int  var; //虽然没有往里面放数,但是里面存在一个随机乱七八糟的数<br>   2.定义并且初始化(分配内存并且往里面放一个数字)<br>         int var = 250;<br>   3.连续只定义<br>         int var1, var2, var3;<br>   4.连续定义并且初始化<br>         int var1 = 1, var2 = 2, var3 = 3;</p>
-<h3 id="5-标识符命名问题"><a href="#5-标识符命名问题" class="headerlink" title="5.标识符命名问题"></a>5.标识符命名问题</h3><p>   标识符(类似姓名):就是变量名(例如:var)或者函数名(例如:main,printf)<br>   标识符命名规则:<br>   1.第一个字母不能是数字,只能是字母或者下划线,区分大小写<br>   例如:<br>      int  2var; //gcc报错<br>      int  v2ar; //可以<br>      int _v2ar; //可以<br>   2.尽量做到见名知意!<br>      int age = 18;<br>      int weight = 128;<br>      int height = 172;<br>   3.驼峰(windows程序员)和下划线(linux程序员)<br>      驼峰:int nAge = 18;<br>      int CreateWindows=250;<br>      下划线:int create_windows = 250;<br>   4.C语言的关键字:有特殊含义功能的单词,这些单词不能随意使用<br>   例如:<br>      int , return, void, main, include等<br>      int int  = 250; //不能用关键字取变量名</p>
-<h3 id="6-C语言编程风格要求"><a href="#6-C语言编程风格要求" class="headerlink" title="6.C语言编程风格要求"></a>6.C语言编程风格要求</h3><p>   a)各种该<br>   该空格空格,该对齐对齐,该TAB键TAB键,该独占一行独占一行<br>      int main(void) {printf(“我是牛掰的人.\n”);return 0;}<br>   b)代码尽量靠屏幕左侧2/3区域,如果超过换行<br>       printf(“aaaaaaaaaaaaaaaaaaaa”<br>                   “aaaaaaaaaaaaaaaaaaaa”<br>                   “aaaaaaaaaa\n”);<br>   c)注意标识符问题<br>   案例:编写C程序,掌握变量的玩法<br>   实验步骤:<br>      mkdir -p /home/tarena/stdc/day02/<br>      cd /home/tarena/stdc/day02/<br>      vim var.c<br>      gcc -E -o var.i var.c<br>      gcc -c -o var.o var.i<br>      gcc -o var var.o<br>      ./var<br>   一步到位:<br>      gcc -o var var.c<br>      ./var</p>
-<h3 id="7-变量的数据类型"><a href="#7-变量的数据类型" class="headerlink" title="7.变量的数据类型"></a>7.变量的数据类型</h3><blockquote>
-<p>1.数据类型功能:让编译器gcc计算变量将来要分配的内存空间大小<br>2.12类基本数据类型如下</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>关键字名称</th>
-<th>含义</th>
-<th>内存大小</th>
-<th>数字范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>char</td>
-<td>字符类型(本质是单字节整型数)</td>
-<td>1字节</td>
-<td>-128~127(背)</td>
-</tr>
-<tr>
-<td>unsigned char</td>
-<td>非负的单字节整数</td>
-<td>1字节</td>
-<td>0~255(背)</td>
-</tr>
-<tr>
-<td>short</td>
-<td>双字节整数</td>
-<td>2字节</td>
-<td>-32768~32767</td>
-</tr>
-<tr>
-<td>unsigned short</td>
-<td>非负的双字节整数</td>
-<td>2字节</td>
-<td>0~65535</td>
-</tr>
-<tr>
-<td>int</td>
-<td>四字节整数</td>
-<td>4字节</td>
-<td>-2^31 ~ 2^31-1</td>
-</tr>
-<tr>
-<td>unsigned int</td>
-<td>非负的四字节整数</td>
-<td>4字节</td>
-<td>0~2^32-1</td>
-</tr>
-<tr>
-<td>long</td>
-<td>四字节整数</td>
-<td>4字节</td>
-<td>-2^31 ~ 2^31-1</td>
-</tr>
-<tr>
-<td>unsigned long</td>
-<td>非负的四字节整数</td>
-<td>4字节</td>
-<td>0~2^32-1</td>
-</tr>
-<tr>
-<td>long long</td>
-<td>八字节整数</td>
-<td>8字节</td>
-<td>-2^63~2^63-1</td>
-</tr>
-<tr>
-<td>unsigned long long</td>
-<td>非负八字节整数</td>
-<td>8字节</td>
-<td>0~2^64-1</td>
-</tr>
-<tr>
-<td>float</td>
-<td>单精度浮点数</td>
-<td>4字节</td>
-<td>略</td>
-</tr>
-<tr>
-<td>double</td>
-<td>双精度浮点数</td>
-<td>8字节</td>
-<td>略</td>
-</tr>
-</tbody></table>
-<p>   例如:<br>    char var = 1; //分配1字节<br>    short var = 1; //分配2字节<br>    long long var = 1; //分配8字节<br>    double var = 1.2; //分配8字节</p>
-<p>   var.c<br>     /<em>变量演示代码</em>/<br>      #include &lt;stdio.h&gt;<br>      int main(void)<br>      {<br>            //只定义<br>            int var1;<br>            printf(“var1的值是%d\n”, var1);<br>            //定义并且初始化<br>            int var2 = 250;<br>            printf(“var2的值是%d\n”, var2);<br>            //连续只定义<br>            int var3, var4, var5, var6;<br>            printf(“var3的值是%d, var4的值是%d,”<br>                  “var5的值是%d, var6的值是%d\n”,<br>                          var3, var4, var5, var6);<br>            //连续定义并初始化<br>            int var7 = 250, var8 = 520;<br>            printf(“var7的值是%d, var8的值是%d\n”,<br>                                      var7, var8);<br>            return 0;<br>      }</p>
-<h3 id="8-注意两点"><a href="#8-注意两点" class="headerlink" title="8.注意两点"></a>8.注意两点</h3><p>a)每种数据类型都有有符号和无符号</p>
-<p>   1.有符号数字有正负之分,无需加关键字unsigned,但是可以加或者不加signed关键字<br>   例如:<br>      int a = -10; 等价于 signed int a = -10;<br>   2.无符号数字只有0和正数,必须用unsigned关键字修饰<br>       例如:unsigned int a = 10;</p>
-<p>b)切记:<br>   unsigned int和unsigned long对于gcc编译器来说是不一样的:</p>
-<blockquote>
-<p>对于32位系统/64位系统,unsigned int都是4字节<br>对于32位系统,unsigned long是4字节<br>对于64位系统,unsigned long是8字节<br>将来学指针的时候,用得着<br>c)利用关键字sizeof能够查看数据类型或者变量分配内存的大小<br>   sizeof关键字语法:内存大小(单位是字节) = sizeof(变量名或者数据类型名)<br>   例如:<br>      long long var  = 1;<br>      printf(“%d  %d\n”, sizeof(long long), sizeof(var));<br>   切记:<br>   sizeof关键字后面的小括号里如果对变量对应的内存进行修改,此修改是无效的</p>
-</blockquote>
-<p>   sizeof.c<br>      /<em>sizeof关键字演示</em>/<br>      #include &lt;stdio.h&gt;<br>      int main(void)<br>      {<br>         int var = 1;<br>         char c = 2;<br>         printf(“sizeof(c)=%d, sizeof(var)=%d\n”,<br>                       sizeof(c), sizeof(var));<br>         printf(“sizeof(char)=%d, sizeof(int)=%d\n”,<br>                   sizeof(char), sizeof(int));<br>      /<em>把char,unsigned char…double占用的内存都打印输出显示</em>/<br>         var = 200;<br>         sizeof(var = 400);<br>         printf(“var=%d\n”, var);<br>         return 0;<br>      }</p>
-<p>###9.细说基本数据类型之字符类型char<br>a)字符常量:用单引号括起来表示,其值不可改变</p>
-<p>   例如:<br>      ‘A’,’a’<br>b)字符变量存储的数据本质就是一个字符对应的整数(专业术语叫ascii码)</p>
-<p>   例如:<br>      char c = ‘A’; //表面看分配1字节内存空间,并且里面放了一个字符常量’A’<br>   本质是分配1字节内存空间,并且里面放字符常量’A’的ascii码<br>   就是一个整型数而已<br>   注意:这个整型数ascii码和字符常量的对应关系计算机硬件已经做好<br>   内存只存字符常量对应的ascii码<br>   ascii码和字符常量的对应关系:<br>     给人看                给计算机看<br>     字符常量            ascii码<br>       ‘A’(中文你好)  65(英文hello)<br>       ‘B’                 66<br>       ‘1’                 49<br>       ‘a’                 97<br>      所以:’d’ - ‘a’ = 本质是 100 - 97 = 3</p>
-<p>c)字符变量打印输出的占位符用%c(按字符常量形式显示),%d(按整型数ascii形式显示)   </p>
-<p>   例如:<br>      char c = ‘A’;<br>      printf(“%c  %d\n”, c, c);  //输出:A  65   </p>
-<p>   char.c<br>      /<em>字符变量演示</em>/<br>      #include &lt;stdio.h&gt;<br>      int main(void)<br>      {<br>        char a = ‘A’;<br>        printf(“按照字符形式显示:%c, 按照整数形式显示:%d\n”, a, a);<br>        char b = ‘d’;<br>        char c = ‘a’;<br>        printf(“b - c差值是%d\n”, b - c);<br>        char d = 66;<br>        printf(“按照字符形式显示:%c, 按照整数形式显示:%d\n”, d, d);<br>        return 0;<br>      }</p>
-
+<h3 id="4-定义变量的四种形式"><a href="#4-定义变量的四种形式" class="headerlink" title="4.定义变量的四种形式"></a>4.定义变量的四种形式</h3><p> 1.只定义(只分配内存,不会往里面放数)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int  var; &#x2F;&#x2F;虽然没有往里面放数,但是里面存在一个随机乱七八糟的数</span></pre></td></tr></table></figure>
+<p>   2.定义并且初始化(分配内存并且往里面放一个数字)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">         int var &#x3D; 250;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;         </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   3.连续只定义</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">         int var1, var2, var3;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;         </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">   4.连续定义并且初始化</span></pre></td></tr></table></figure>
+<pre><code>int var1 = 1, var2 = 2, var3 = 3;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">### 5.标识符命名问题</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   标识符(类似姓名):就是变量名(例如:var)或者函数名(例如:main,printf)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   标识符命名规则:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   1.第一个字母不能是数字,只能是字母或者下划线,区分大小写</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">   例如:</span></pre></td></tr></table></figure>
+<pre><code>int  2var; //gcc报错
+int  v2ar; //可以
+int _v2ar; //可以</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">2.尽量做到见名知意!</span></pre></td></tr></table></figure>
+<pre><code>int age = 18;
+int weight = 128;   
+int height = 172;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">3.驼峰(windows程序员)和下划线(linux程序员)</span></pre></td></tr></table></figure>
+<pre><code>驼峰:int nAge = 18; 
+int CreateWindows=250;
+下划线:int create_windows = 250;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">4.C语言的关键字:有特殊含义功能的单词,这些单词不能随意使用</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">例如:</span></pre></td></tr></table></figure>
+<pre><code>int , return, void, main, include等
+int int  = 250; //不能用关键字取变量名</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">### 6.C语言编程风格要求</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   a)各种该</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   该空格空格,该对齐对齐,该TAB键TAB键,该独占一行独占一行</span></pre></td></tr></table></figure>
+<pre><code>int main(void) {printf(&quot;我是牛掰的人.\n&quot;);return 0;}  </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">b)代码尽量靠屏幕左侧2&#x2F;3区域,如果超过换行</span></pre></td></tr></table></figure>
+<pre><code>printf(&quot;aaaaaaaaaaaaaaaaaaaa&quot;
+            &quot;aaaaaaaaaaaaaaaaaaaa&quot;
+            &quot;aaaaaaaaaa\n&quot;);</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">c)注意标识符问题</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">案例:编写C程序,掌握变量的玩法</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">实验步骤:</span></pre></td></tr></table></figure>
+<pre><code>mkdir -p /home/tarena/stdc/day02/
+cd /home/tarena/stdc/day02/
+vim var.c
+gcc -E -o var.i var.c
+gcc -c -o var.o var.i
+gcc -o var var.o
+./var</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">一步到位:</span></pre></td></tr></table></figure>
+<pre><code>gcc -o var var.c
+./var</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">### 7.变量的数据类型</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   &gt;1.数据类型功能:让编译器gcc计算变量将来要分配的内存空间大小</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   &gt;2.12类基本数据类型如下</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">   |关键字名称  |       含义  |      内存大小|  数字范围|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   |-----------| ------------|    ---------|---------|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">   |  char  |   字符类型(本质是单字节整型数)|    1字节 |     -128~127(背)|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">   |unsigned char|   非负的单字节整数 |     1字节|      0~255(背)|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">   | short  |     双字节整数 |    2字节|    -32768~32767|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">   |unsigned short |非负的双字节整数 |      2字节     | 0~65535|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">   |int     |      四字节整数        |   4字节   | -2^31 ~ 2^31-1|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">   |unsigned int     | 非负的四字节整数|       4字节 |   0~2^32-1|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">   | long           |       四字节整数     |      4字节   | -2^31 ~ 2^31-1|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">   | unsigned long  | 非负的四字节整数     | 4字节   | 0~2^32-1|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">   | long long       |     八字节整数      |    8字节|    -2^63~2^63-1|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">   |unsigned long long| 非负八字节整数     |  8字节   | 0~2^64-1|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">   |float  |   单精度浮点数    |    4字节 |   略|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">   |double |双精度浮点数        |8字节  |       略|</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">   例如:</span></pre></td></tr></table></figure>
+<pre><code>char var = 1; //分配1字节
+short var = 1; //分配2字节
+long long var = 1; //分配8字节
+double var = 1.2; //分配8字节</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">var.c</span></pre></td></tr></table></figure>
+<pre><code>/*变量演示代码*/
+ #include &lt;stdio.h&gt;
+ int main(void)
+ {
+       //只定义
+       int var1;
+       printf(&quot;var1的值是%d\n&quot;, var1);
+       //定义并且初始化
+       int var2 = 250;
+       printf(&quot;var2的值是%d\n&quot;, var2);
+       //连续只定义
+       int var3, var4, var5, var6;
+       printf(&quot;var3的值是%d, var4的值是%d,&quot;
+             &quot;var5的值是%d, var6的值是%d\n&quot;,
+                     var3, var4, var5, var6);
+       //连续定义并初始化
+       int var7 = 250, var8 = 520;
+       printf(&quot;var7的值是%d, var8的值是%d\n&quot;, 
+                                 var7, var8);
+       return 0;
+ }</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">### 8.注意两点</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">a)每种数据类型都有有符号和无符号</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   1.有符号数字有正负之分,无需加关键字unsigned,但是可以加或者不加signed关键字</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">   例如:</span></pre></td></tr></table></figure>
+<pre><code>int a = -10; 等价于 signed int a = -10;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">2.无符号数字只有0和正数,必须用unsigned关键字修饰</span></pre></td></tr></table></figure>
+<pre><code>例如:unsigned int a = 10;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">b)切记:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   unsigned int和unsigned long对于gcc编译器来说是不一样的:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   &gt;对于32位系统&#x2F;64位系统,unsigned int都是4字节</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">   &gt;对于32位系统,unsigned long是4字节</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   &gt;对于64位系统,unsigned long是8字节</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">   &gt;将来学指针的时候,用得着</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">c)利用关键字sizeof能够查看数据类型或者变量分配内存的大小</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">   sizeof关键字语法:内存大小(单位是字节) &#x3D; sizeof(变量名或者数据类型名)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">   例如:</span></pre></td></tr></table></figure>
+<pre><code>long long var  = 1;
+printf(&quot;%d  %d\n&quot;, sizeof(long long), sizeof(var));</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">切记:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sizeof关键字后面的小括号里如果对变量对应的内存进行修改,此修改是无效的</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">sizeof.c</span></pre></td></tr></table></figure>
+<pre><code>/*sizeof关键字演示*/
+ #include &lt;stdio.h&gt;
+ int main(void)
+ {
+    int var = 1;
+    char c = 2;
+    printf(&quot;sizeof(c)=%d, sizeof(var)=%d\n&quot;, 
+                  sizeof(c), sizeof(var));
+    printf(&quot;sizeof(char)=%d, sizeof(int)=%d\n&quot;, 
+              sizeof(char), sizeof(int));
+ /*把char,unsigned char...double占用的内存都打印输出显示*/
+    var = 200;
+    sizeof(var = 400);
+    printf(&quot;var=%d\n&quot;, var);
+    return 0;
+ }</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">###9.细说基本数据类型之字符类型char</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">a)字符常量:用单引号括起来表示,其值不可改变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   例如:</span></pre></td></tr></table></figure>
+<pre><code>&apos;A&apos;,&apos;a&apos;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">b)字符变量存储的数据本质就是一个字符对应的整数(专业术语叫ascii码)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   例如:</span></pre></td></tr></table></figure>
+<pre><code>char c = &apos;A&apos;; //表面看分配1字节内存空间,并且里面放了一个字符常量&apos;A&apos;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">本质是分配1字节内存空间,并且里面放字符常量&#39;A&#39;的ascii码</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">就是一个整型数而已</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">注意:这个整型数ascii码和字符常量的对应关系计算机硬件已经做好</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">内存只存字符常量对应的ascii码</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">ascii码和字符常量的对应关系:</span></pre></td></tr></table></figure>
+<pre><code>给人看                给计算机看
+字符常量            ascii码
+  &apos;A&apos;(中文你好)  65(英文hello)
+  &apos;B&apos;                 66
+  &apos;1&apos;                 49
+  &apos;a&apos;                 97
+ 所以:&apos;d&apos; - &apos;a&apos; = 本质是 100 - 97 = 3</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">c)字符变量打印输出的占位符用%c(按字符常量形式显示),%d(按整型数ascii形式显示)   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   例如:</span></pre></td></tr></table></figure>
+<pre><code>char c = &apos;A&apos;;
+printf(&quot;%c  %d\n&quot;, c, c);  //输出:A  65   </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">char.c</span></pre></td></tr></table></figure>
+<pre><code>/*字符变量演示*/
+#include &lt;stdio.h&gt;
+int main(void)
+{
+  char a = &apos;A&apos;;
+  printf(&quot;按照字符形式显示:%c, 按照整数形式显示:%d\n&quot;, a, a);
+  char b = &apos;d&apos;;
+  char c = &apos;a&apos;;
+  printf(&quot;b - c差值是%d\n&quot;, b - c);
+  char d = 66;
+  printf(&quot;按照字符形式显示:%c, 按照整数形式显示:%d\n&quot;, d, d);
+  return 0;
+}</code></pre><pre><code></code></pre>
       
 
       
