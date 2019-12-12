@@ -875,6 +875,189 @@ C 语言是一种广泛使用的计算机语言,它与 Java 编程语言一样�
 
 
   
+    <article id="post-gcc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/11/gcc/">gcc</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/11/gcc/" class="archive-article-date">
+  	<time datetime="2019-12-11T10:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="大名鼎鼎的C程序编译器gcc-GNU软件之父编写的"><a href="#大名鼎鼎的C程序编译器gcc-GNU软件之父编写的" class="headerlink" title="大名鼎鼎的C程序编译器gcc(GNU软件之父编写的)"></a>大名鼎鼎的C程序编译器gcc(GNU软件之父编写的)</h2><h3 id="1-gcc功能"><a href="#1-gcc功能" class="headerlink" title="1.gcc功能:"></a>1.gcc功能:</h3><ul>
+<li><p>它也是一个程序,它的名字叫C程序的编译器</p>
+</li>
+<li><p>它类似一个翻译官,将C程序的源文件翻译成计算机能够识别的,能够看懂的文件</p>
+<blockquote>
+<p>例如:gcc helloworld.c 生成一个a.out可执行的文件,a.out计算机能够识别 helloworld.c计算机不认识:</p>
+</blockquote></li></ul>
+        
+          <a class="article-more-a" href="/2019/12/11/gcc/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/11/gcc/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/12/C02/">C02</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/12/C02/" class="archive-article-date">
+  	<time datetime="2019-12-12T10:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="C语言-C程序-的变量"><a href="#C语言-C程序-的变量" class="headerlink" title="C语言(C程序)的变量"></a>C语言(C程序)的变量</h2><h3 id="1-明确计算机内存相关概念"><a href="#1-明确计算机内存相关概念" class="headerlink" title="1.明确计算机内存相关概念"></a>1.明确计算机内存相关概念</h3><p> 内存:暂存CPU数据运算时的数据或者运算之后的数据</p>
+<blockquote>
+<p>优点:速度快<br>缺点:掉电丢失<br>结论:程序最终玩的内存(玩的不是程序,玩的是内存)<br> 字节(Byte):计算机中将内存分成一格一格,每一格用来存一个数字<br>每一格专业术语叫字节,内存的最小存储单元为字节<br> 地址(address):计算机中给内存的每个字节指定一个编号,此编号从0开始<br>此编号专业术语叫地址<br> 存储区(buffer):计算机中将一个字节或者多个字节形成的存储单元称之为存储区<br>例如:计算机中可能需要4个字节的存储区来存储300亿这个大数<br>  首地址(俗称起始地址,Base Address):存储区中第一个字节的地址<br>   问:那么C程序如何分配内存空间呢?<br>一旦将来分配好内存,就可以向内存存数或者从内存读数<br>   答:通过定义变量来分配内存</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2019/12/12/C02/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/12/C02/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
