@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="MyBlog">
 <meta property="og:description" content="大名鼎鼎的C程序编译器gcc(GNU软件之父编写的)1.gcc功能: 它也是一个程序,它的名字叫C程序的编译器  它类似一个翻译官,将C程序的源文件翻译成计算机能够识别的,能够看懂的文件  例如:gcc helloworld.c 生成一个a.out可执行的文件,a.out计算机能够识别 helloworld.c计算机不认识:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-12T13:58:41.064Z">
+<meta property="og:updated_time" content="2019-12-12T14:07:31.921Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
@@ -228,6 +228,7 @@
 <p>gcc将包含的头文件内容全盘拷贝到源文件中<br>对应的选项:-E<br>例如:</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">gcc   -E  helloworld.c  -o  helloworld.i</span></pre></td></tr></table></figure>
+
 <blockquote>
 <p>语义:gcc翻译官对helloworld.c源文件进行预处理,将stdio.h文件里所有的<br>内容拷贝到helloworld.c中,并且生成一个新文件helloworld.i</p>
 </blockquote>
@@ -236,6 +237,7 @@
 <p>只编译不链接<br>对应的选项:-c<br>例如:</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">gcc -c -o helloworld.o  helloworld.i</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">gcc -c -o helloworld.o  helloworld.c</span></pre></td></tr></table></figure>
+
 <blockquote>
 <p>语义:gcc翻译官仅仅将预处理器以后的文件或者源文件编译翻译成计算机能够识别的可执行文件helloworld.o此时helloworld.o中没有大神的printf函数的内容</p>
 </blockquote>
@@ -246,12 +248,18 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">gcc  -o  helloworld  helloworld.o</span></pre></td></tr></table></figure>
 
 
-<h3 id="4-结论-gcc编译程序的三种方式"><a href="#4-结论-gcc编译程序的三种方式" class="headerlink" title="4.结论:gcc编译程序的三种方式"></a>4.结论:gcc编译程序的三种方式</h3><p>   1.流氓法:<br>      gcc  helloworld.c<br>   默认生成a.out</p>
+<h3 id="4-结论-gcc编译程序的三种方式"><a href="#4-结论-gcc编译程序的三种方式" class="headerlink" title="4.结论:gcc编译程序的三种方式"></a>4.结论:gcc编译程序的三种方式</h3><p>   1.流氓法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">gcc  helloworld.c</span></pre></td></tr></table></figure>
+
+<p>   默认生成a.out</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">.&#x2F;a.out</span></pre></td></tr></table></figure>
+
 <p>   2.分步编译:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">   gcc -E -o helloworld.i  helloworld.c</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   vim helloworld.i  &#x2F;&#x2F;查看文件的内容,关键之前的注释是否还存在？ </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   gcc -c -o helloworld.o helloworld.i</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   gcc -o helloworld helloworld.o  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">指定生成helloworld</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   .&#x2F;helloworld</span></pre></td></tr></table></figure>
+
 <p>   3.一步到位:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">gcc -o helloworld helloworld.c </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   .&#x2F;helloworld</span></pre></td></tr></table></figure>
+
 
 <p>Linux下使用gcc编译程序进行c语言程序的编译</p>
 
