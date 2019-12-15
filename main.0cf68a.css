@@ -4332,11 +4332,10 @@ category-all-page {
   }
 .category-list-item-list-item:hover {
     background-color: #555555;
-    color: white;
+    color: black;
 }
 .category-list-item-list-link{
-  color: white;
-  
+  color: black;
 }
 
   .category-all-page .category-list-item-list-count {
