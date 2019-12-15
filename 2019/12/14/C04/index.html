@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://loading-end.github.io">
-  <title>Category: C语言 | MyBlog</title>
+  <title>C04 | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MyBlog">
-<meta property="og:url" content="https:&#x2F;&#x2F;loading-end.github.io&#x2F;categories&#x2F;C%E8%AF%AD%E8%A8%80&#x2F;index.html">
+  <meta name="description" content="1.逻辑(真真假假,假假真真)运算符: 明确:计算机中的真就是非0(包括1),0就是假 逻辑运算符作用:实现计算机程序中的逻辑判断 例如:当用户名和密码都对了,才能登陆 登陆方式可以是微信或者手机号后者抖音号等  逻辑运算符类型:三类 1.逻辑与: &amp;amp;&amp;amp;(并且,与此同时的意思) 2.逻辑或: ||(或者的意思) 3.逻辑非: !(对着干的意思)  逻辑与&amp;amp;&amp;amp;运算符特">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C04">
+<meta property="og:url" content="https:&#x2F;&#x2F;loading-end.github.io&#x2F;2019&#x2F;12&#x2F;14&#x2F;C04&#x2F;index.html">
 <meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="1.逻辑(真真假假,假假真真)运算符: 明确:计算机中的真就是非0(包括1),0就是假 逻辑运算符作用:实现计算机程序中的逻辑判断 例如:当用户名和密码都对了,才能登陆 登陆方式可以是微信或者手机号后者抖音号等  逻辑运算符类型:三类 1.逻辑与: &amp;amp;&amp;amp;(并且,与此同时的意思) 2.逻辑或: ||(或者的意思) 3.逻辑非: !(对着干的意思)  逻辑与&amp;amp;&amp;amp;运算符特">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-15T06:44:03.697Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
@@ -187,36 +191,124 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-C04" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      C04
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/14/C04/" class="archive-article-date">
+
+        
+        <a href="/2019/12/14/C04/" class="archive-article-date">
   	<time datetime="2019-12-14T10:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/14/C04/">C04</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-逻辑-真真假假-假假真真-运算符"><a href="#1-逻辑-真真假假-假假真真-运算符" class="headerlink" title="1.逻辑(真真假假,假假真真)运算符:"></a>1.逻辑(真真假假,假假真真)运算符:</h3><ul>
+<li><p>明确:计算机中的真就是非0(包括1),0就是假<br> 逻辑运算符作用:实现计算机程序中的逻辑判断<br> 例如:当用户名和密码都对了,才能登陆<br> 登陆方式可以是微信或者手机号后者抖音号等</p>
+</li>
+<li><p>逻辑运算符类型:三类<br> 1.逻辑与: &amp;&amp;(并且,与此同时的意思)<br> 2.逻辑或: ||(或者的意思)<br> 3.逻辑非: !(对着干的意思)</p>
+</li>
+<li><p>逻辑与&amp;&amp;运算符特点<br> 使用语法:C=表达式A &amp;&amp; 表达式B<br> 语义:只有当A和B的值都为真(非0),整个表达式C的值才为真</p>
+<pre><code>只要有一个为假,整个表达式C的值都为假</code></pre><p> 例如:1 &amp;&amp; 1; //整个表示式结果为真</p>
+<pre><code>0 &amp;&amp; 1; //假
+1 &amp;&amp; 0; //假
+0 &amp;&amp; 0; //假</code></pre><a id="more"></a></li>
+<li><p>逻辑或||运算符特点<br>  使用语法:C=表达式A || 表达式B<br>  语义:只要A和B中有一个为真,整个表达式C的值都为真</p>
+<pre><code>只有当A和B都是假,结果才能是假</code></pre><p>  例如:0 || 0; //假</p>
+<pre><code>1 || 0; //真
+0 || 1; //真
+1 || 1; //真</code></pre></li>
+<li><p>逻辑非运算符特点<br> 使用语法:!表达式A<br> 语义:A假结果为真,A真结果为假<br> 例如:</p>
+<pre><code>!1;//结果为假
+!0;//结果为真</code></pre></li>
+</ul>
+<p><font color="red">短路运算(笔试题必考) </font><br>短路运算(笔试题必考)<br> 形式1.A &amp;&amp; B:如果A的值为假,则B不处理,B的代码不执行<br> 例如:<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int a &#x3D; 1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">0 &amp;&amp; ++a;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">printf(&quot;a &#x3D; %d\n&quot;, a); &#x2F;&#x2F;a&#x3D;1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">int b &#x3D; 1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">250 &amp;&amp; ++b;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">printf(&quot;b &#x3D; %d\n&quot;, b); &#x2F;&#x2F;b&#x3D;2</span></pre></td></tr></table></figure></p>
+<p>形式2.A || B:  如果A的值为真,则B不处理,B的代码不执行<br>例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int a &#x3D; 1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">0 || ++a;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">printf(&quot;a &#x3D; %d\n&quot;, a); &#x2F;&#x2F;a&#x3D;2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">int b &#x3D; 1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">250 || ++b;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">printf(&quot;b &#x3D; %d\n&quot;, b); &#x2F;&#x2F;b&#x3D;1</span></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h3 id="2-位-bit-运算符"><a href="#2-位-bit-运算符" class="headerlink" title="2.位(bit)运算符:"></a>2.位(bit)运算符:</h3><ol>
+<li>位运算符四种形式:<br>位与:&amp;(清0)<br>位或 : |(置1)<br>位异或: ^(反转)<br>位反: ~ (取反)</li>
+<li>运算符特点<br>语法:C = A &amp; B;(任何数跟0做位与,结果为0,任何数跟1做位与,保持原值)<br>语法:C = A | B;(任何数跟1做位或,结果为1,任何数跟0做位或,保持原值)<br>语法:C= ~ A;(0变1,1变0)</li>
+</ol>
+<h3 id="3-移位运算符"><a href="#3-移位运算符" class="headerlink" title="3.移位运算符"></a>3.移位运算符</h3><p>移位运算符种类:两种<br>   左移:A&lt;&lt;B   (语义:将A左移B个位置)<br>   右移 :  A&gt;&gt;B   (语义:将A右移B个位置)</p>
+<blockquote>
+<p>左移n位相当于乘以2的n次方<br>右移n位相当于除以2的n次方</p>
+</blockquote>
+<p>如果程序中将来涉及乘或者除2的n次方运算,务必用左移或者右移<font color="red">高薪 </font><br>      严重鄙视用* 或者/,因为后者的执行效率相当低下;<br>      例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int a &#x3D; 1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">int b &#x3D; a * 4; &#x2F;&#x2F;垃圾代码</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">int b &#x3D; a &lt;&lt; 2; &#x2F;&#x2F;高薪代码</span></pre></td></tr></table></figure>
+
+<p><font color="red">切记实际开发常用的位操作公式 </font><br>切记实际开发常用的位操作公式:<br>   清0公式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">1.将某个变量的某1个位清0,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   A &amp;&#x3D; ~(1 &lt;&lt; 位编号); &#x2F;&#x2F;类似: A &#x3D; A &amp; ~(1 &lt;&lt; 位编号)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">2.将某个变量的某2个连续的位清0,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   A &amp;&#x3D; ~(3 &lt;&lt; 位编号);         </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">3.将某个变量的某3个连续的位清0,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   A &amp;&#x3D; ~(7 &lt;&lt; 位编号);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">4.将某个变量的某4个连续的位清0,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">   A &amp;&#x3D; ~(0xF &lt;&lt; 位编号);</span></pre></td></tr></table></figure>
+<p>其中:3为 8 4 2 1  中的后两位 2+1</p>
+<p> 置1公式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">1.将某个变量的某1个位置1,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   A |&#x3D; (1 &lt;&lt; 位编号);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">2.将某个变量的某2个连续的位置1,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   A |&#x3D; (3 &lt;&lt; 位编号);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">3.将某个变量的某3个连续的位置1,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">   A |&#x3D; (7 &lt;&lt; 位编号);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">4.将某个变量的某4个连续的位置1,其他位保持不变</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">   A |&#x3D; (0xF &lt;&lt; 位编号);</span></pre></td></tr></table></figure>
+
+<p>附代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#x2F;*位运算符号*&#x2F;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">int main(void)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;0x5a &amp; 0xe3的结果是%#x\n&quot;, 0x5a &amp; 0xe3);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;0x5a &amp; 0xf7的结果是%#x\n&quot;, 0x5a &amp; 0xf7);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;0x5a &amp; 0xe7的结果是%#x\n&quot;, 0x5a &amp; 0xe7);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;0x5a | 0x04的结果是%#x\n&quot;, 0x5a | 0x04);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;0x5a ^ 0xe3的结果是%#x\n&quot;, 0x5a ^ 0xe3);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;1.0x5a默认为int类型,32位,4字节</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;2.0x5a:0000 0000 0000 0000 0000 0000 0101 1010</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;3.取反:1111 1111 1111 1111 1111 1111 1010 0101</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;~0x5a结果是%#x\n&quot;, ~0x5a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;~0x5a结果是%d\n&quot;, ~0x5a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">   </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;问：就想看0xa5,不想看前面一堆的f</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    unsigned char a &#x3D; ~0x5a;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;~0x5a结果是%#x\n&quot;, a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    return 0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="4-取地址运算符-amp-和解引用运算符"><a href="#4-取地址运算符-amp-和解引用运算符" class="headerlink" title="4.取地址运算符&amp;和解引用运算符 *"></a>4.取地址运算符&amp;和解引用运算符 *</h3><p> 用 *&amp;a = 520; //根据变量a的地址(&amp;a)找到a的内存,然后向内存写入一个新数520</p>
+<h3 id="5-条件运算符-又称三目运算符"><a href="#5-条件运算符-又称三目运算符" class="headerlink" title="5.条件运算符(又称三目运算符)"></a>5.条件运算符(又称三目运算符)</h3><p>语法格式:整个表达式结果D = 条件表达式A ? 表达示B : 表达式C<br>语义:如果A为真,D=表达式B的运算结果,否则D=表达式C的运算结果<br>例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int a &#x3D; 1 ? 2 : 3; &#x2F;&#x2F;a&#x3D;2</span></pre></td></tr></table></figure>
+
+<h3 id="6-数据类型转换-隐式转换和强制转换"><a href="#6-数据类型转换-隐式转换和强制转换" class="headerlink" title="6.数据类型转换(隐式转换和强制转换)"></a>6.数据类型转换(隐式转换和强制转换)</h3><ul>
+<li>隐式转换过程中必须把占内存小的类型转换成占内容大的类型<br> 例如:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int a &#x3D; 0, c;  &#x2F;&#x2F;各占4字节</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">char b &#x3D; 2;  &#x2F;&#x2F;占1字节</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">c &#x3D; a + b;  &#x2F;&#x2F;gcc编译器自动将b转换成int类型然后再和a做加运算</span></pre></td></tr></table></figure>
+<p>隐式转换的致命缺陷代码的可读性很差!!!</p>
+<ul>
+<li>强制转换(建议使用的转换,目的：提高代码的可读性)</li>
+</ul>
+<p>强制转换语法格式:目标类型变量 = (目标类型)源类型变量;<br>例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">char a &#x3D; 90;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">int b &#x3D; (int)a; &#x2F;&#x2F;gcc强制将a转换成int类型在赋值给变量b</span></pre></td></tr></table></figure>
+
+<p>强制数据类型转换可能会造成数据的丢失!!!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#x2F;*数据类型转换演示*&#x2F;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">int main(void)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;由于里面有double类型的0.9,所以</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;gcc将两个int类型的1转换成double类型</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F;最后sizeof(double类型的1)求内存大小</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;sizeof(1?1:0.9)的结果是%d\n&quot;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                    sizeof(1 ? 1 : 0.9));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;-7+3 &gt; 0结果是%d\n&quot;, -7+3 &gt; 0);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;-7+3u &gt; 0结果是%d\n&quot;, -7+3u &gt; 0);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;-7变成无符号类型的数字是%u\n&quot;, -7);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;(char)300结果是%d\n&quot;, (char)300);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    int a &#x3D; 555;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    char b &#x3D; (char)a;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    printf(&quot;b &#x3D; %hhd, a &#x3D; %d\n&quot;, b, a);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    return 0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -228,7 +320,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -241,214 +333,124 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://loading-end.github.io/2019/12/14/C04/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/13/C03/" class="archive-article-date">
-  	<time datetime="2019-12-13T10:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/13/C03/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C03</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/13/C03/">C03</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/12/C02/" class="archive-article-date">
-  	<time datetime="2019-12-12T10:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/12/C02/">C02</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/10/C01/" class="archive-article-date">
-  	<time datetime="2019-12-10T10:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/C01/">C01</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/10/%E6%A0%87C%E5%89%8D%E8%A8%80/" class="archive-article-date">
-  	<time datetime="2019-12-10T03:09:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/%E6%A0%87C%E5%89%8D%E8%A8%80/">标C前言</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
 
+  
+
+
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: 'e88a4cc7c4e0aa3ef680',
+  	clientSecret: '05854a56dd334fcd426e540a239683952873a557',
+  	repo: 'loading-end.github.io',
+  	owner: 'Loading-end',
+  	admin: ['Loading-end'],
+  	id: 'Sat Dec 14 2019 18:41:09 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container')
+}
+</script>
+  
+  
+  
 
 
           </div>
@@ -492,10 +494,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
