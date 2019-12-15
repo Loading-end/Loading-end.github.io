@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="MyBlog">
 <meta property="og:description" content="1.goto语句(从哪来滚回哪去)作用:可以让CPU跳转到任何一条语句去执行(孙悟空翻跟头)应用:linux内核操作系统大量使用goto语句(linus)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-15T11:11:10.865Z">
+<meta property="og:updated_time" content="2019-12-15T11:17:06.890Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
@@ -230,11 +230,11 @@
 
 <h3 id="3-数组"><a href="#3-数组" class="headerlink" title="3.数组"></a>3.数组</h3><p>数组的定义:是一种分配内存的方法,分配的内存能够存储多个类型相同的数据</p>
 <ul>
-<li><p>数组分配内存的语法格式:简称定义数组的语法格式</p>
-<pre><code>元素数据类型  数组名[长度(又称数组元素个数)] ={初始化列表(如果有多个,用逗号,分开)};
-例如:</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int   a[5] &#x3D; &#123;1,2,3,4,5&#125;;</span></pre></td></tr></table></figure>
-<pre><code>语义:连续分配5个元素的内存空间,并且每个元素的数据类型为int,每个元素占4字节内存空间,所以最终连续分配了20个字节内存空间,并且每个元素的值分别是      1,2,3,4,5   
-类似:int a = 1, b = 2, c = 3, d = 4, e = 5;   </code></pre></li>
+<li>数组分配内存的语法格式:简称定义数组的语法格式<br>元素数据类型  数组名[长度(又称数组元素个数)] ={初始化列表(如果有多个,用逗号,分开)};<br>例如:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int   a[5] &#x3D; &#123;1,2,3,4,5&#125;;</span></pre></td></tr></table></figure>
+<p>语义:连续分配5个元素的内存空间,并且每个元素的数据类型为int,每个元素占4字节内存空间,所以最终连续分配了20个字节内存空间,并且每个元素的值分别是      1,2,3,4,5<br>类似:int a = 1, b = 2, c = 3, d = 4, e = 5;  </p>
+<ul>
 <li><p>数组中元素的访问是通过运算符”[]”和下标来进行访问<br>  格式:数组元素=数组名[下标]<br>  例如:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int   a[5] &#x3D; &#123;1,2,3,4,5&#125;; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">     第0个元素:a[0] &#x3D; 1</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">     第1个元素:a[1] &#x3D; 2</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">     第2个元素:a[2] &#x3D; 3</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">     第3个元素:a[3] &#x3D; 4</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">     第4个元素:a[4] &#x3D; 5</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">     打印第3个元素的值:printf(&quot;%d\n&quot;, a[3]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">     将第3个元素的值修改为250: a[3] &#x3D; 250;</span></pre></td></tr></table></figure>
 <p>千万注意数组的越界访问(笔试题必考)<br>越界访问,此时程序崩溃</p>
